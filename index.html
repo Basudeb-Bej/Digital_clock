@@ -9,17 +9,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <fieldset class="height">
   <div class="clock">
-    <h1 id="hour">00</h1>
+    <h1 id="per-hour">00</h1>
       <h1 class="dot">:</h1>
-    <h1 id="minute">00</h1>
+    <h1 id="per-minute">00</h1>
       <h1 class="dot">:</h1>
-    <h1 id="second">00</h1>
+    <h1 id="per-second">00</h1>
     <span id="ampm">AM</span>
   </div>
-   
-   
-  <script src="script.js"></script>
+  
+  <fieldset class="container">
+    <div class="date">Date</div>
+    <div class="day">Today</div>
+  </fieldset>
+  
+  <div class="per-container">
+    <div class="per-clock">
+      <div class="hand hour"></div>
+      <div class="hand min"></div>
+      <div class="hand sec"></div>
+     
+      <div style="--i:1" class="letter"><b>1</b></div>
+      <div style="--i:2" class="letter"><b>2</b></div>
+      <div style="--i:3" class="letter"><b>3</b></div>
+      <div style="--i:4" class="letter"><b>4</b></div>
+      <div style="--i:5" class="letter"><b>5</b></div>
+      <div style="--i:6" class="letter"><b>6</b></div>
+      <div style="--i:7" class="letter"><b>7</b></div>
+      <div style="--i:8" class="letter"><b>8</b></div>
+      <div style="--i:9" class="letter"><b>9</b></div>
+      <div style="--i:10" class="letter"><b>10</b></div>
+      <div style="--i:11" class="letter"><b>11</b></div>
+      <div style="--i:12" class="letter"><b>12</b></div>
+    </div></div>
+  
+  <script src="main.js"></script>
+  </fieldset>
 </body>
 </html>
