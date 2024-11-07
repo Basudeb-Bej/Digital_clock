@@ -1,25 +1,24 @@
 body {
-   display: grid;
-   place-items: center;
-   width: 100%;
-   height: 100%;
-   overflow: hidden;
-   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 95vh;
+   width: 95%;
 }
 
 .clock {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 280px;
+  width: 200px;
 }
 
 .clock h1:nth-child(odd) {
-  padding: 5px;
+  padding: 8px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
   box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.2);
-  margin: 0 8px;
+  margin: 8px;
 }
 
 .date, .day {
@@ -32,18 +31,16 @@ body {
 
 .container {
   border-radius: 10px;
-  background-color: #CBCBD0;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 1px 2px 2px black;
-  border-radius: 8px;
-  border: none;
-  bottom: px;
+  border: none; 
   position: absolute;
+  width: 10px;
 }
 
 .per-container {
   height: 100%;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,8 +50,8 @@ body {
 
 .per-clock {
   margin-top: 2rem;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   box-sizing: content-box;
   border: black solid 2px;
   border-radius: 50%;
@@ -63,8 +60,7 @@ body {
   align-items: center;
   position: relative;
   background-color: white;
-  box-shadow: 0 0 10px 1px black,
-    -5px -5px 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 2px 1px black;
 }
 
 .letter {
@@ -82,6 +78,7 @@ body {
   display: inline-block;
   transform: rotate(calc(-30deg * var(--i)));
 }
+
 .circle {
     position: absolute;
     left: 50%;
@@ -111,7 +108,7 @@ body {
 .min {
   --clr: red;
   width: 3px;
-  height: 25%;
+  height: 30%;
   left: 49.5%;
   transform: translateX(-50%);
   background-color: var(--clr);
@@ -121,7 +118,7 @@ body {
 .hour {
   --clr: blue;
   width: 3px;
-  height: 15%;
+  height: 20%;
   background-color: var(--clr);
   border-radius: 100px 100px 0 0;
 }
@@ -140,10 +137,15 @@ body {
 }
 
 .height {
-  height: 300px;
+  height: 220px;
   border: none;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 10px 20px black;
+  box-shadow: 0px 5px 10px black;
   border-radius: 8px;
   display: flex;
+  width: 380px;
+}
+
+h1 {
+  font-size: 23px;
 }
