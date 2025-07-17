@@ -1,4 +1,4 @@
-body {
+/*body {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -141,6 +141,160 @@ body {
   border: none;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 5px 10px black;
+  border-radius: 8px;
+  display: flex;
+  width: 380px;
+}
+
+h1 {
+  font-size: 23px;
+}*/
+
+
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background: #C0C1CE;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.clock h1:nth-child(odd) {
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.date, .day {
+  height: auto;
+  width: 200px;
+  text-align: center;
+  color: black;
+  display: flex;
+}
+
+.container {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 1px 1px 1px black;
+  border: none; 
+  position: absolute;
+  width: 10px;
+}
+
+.per-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.per-clock {
+  margin-top: 2rem;
+  height: 150px;
+  width: 150px;
+  box-sizing: content-box;
+  border: black solid 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 2px 1px black;
+}
+
+.letter {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  inset: 0.10rem;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+.letter b {
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: cyan;
+    transform: translateX(-50%);
+   }
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+}
+
+.sec {
+  width: 1px;
+  height: 38.5%;
+  --clr: aqua;
+  background-color: var(--clr);
+}
+
+.min {
+  --clr: red;
+  width: 3px;
+  height: 30%;
+  left: 49.5%;
+  transform: translateX(-50%);
+  background-color: var(--clr);
+  border-radius: 100px 100px 0 0;
+}
+
+.hour {
+  --clr: blue;
+  width: 3px;
+  height: 20%;
+  background-color: var(--clr);
+  border-radius: 100px 100px 0 0;
+}
+
+.hand:after {
+  content: "";
+  background-color: var(--clr);
+  height: 25%;
+  width: 100%;
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: rotate(180deg);
+  transform: translate(-50%, -50%);
+  border-radius: 0 0 100px 100px;
+}
+
+.height {
+  height: 220px;
+  border: none;
+  background:/* rgba(255, 255, 255, 0.05)*/ white;
+  box-shadow: 0px 2px 3px black;
   border-radius: 8px;
   display: flex;
   width: 380px;
