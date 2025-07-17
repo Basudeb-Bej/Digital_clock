@@ -8,9 +8,9 @@ A simple and responsive digital clock built using **HTML**, **CSS**, and **JavaS
 
 <!--## 📸 Preview
 
-![Digital Clock Screenshot](screenshot.png)   Add your own screenshot image if possible -->
+![Digital Clock Screenshot](screenshot.png)   Add your own screenshot image if possible 
 
----
+--- -->
 
 ## 🔧 Features
 
