@@ -2,50 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>simple_clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Digital Clock with Voice</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="height">
-  <div class="clock">
-    <h1 id="per-hour">00</h1>
-      <h1 class="dot">:</h1>
-    <h1 id="per-minute">00</h1>
-      <h1 class="dot">:</h1>
-    <h1 id="per-second">00</h1>
-    <span id="ampm">AM</span>
-  </div>
-  
-  <fieldset class="container">
-    <div class="date">Date</div>
-    <div class="day">Today</div>
-  </fieldset>
-  
-  <div class="per-container">
-    <div class="per-clock">
-      <div class="hand hour"></div>
-      <div class="hand min"></div>
-      <div class="hand sec"></div>
-      <div class="circle"></div>
+  <div class="clock-container">
+    <div class="voice-controls">
+      <div id="speakTimeIcon" class="voice-icon" title="Speak Time">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+        </svg>
+      </div>
+      <div id="speakDateIcon" class="voice-icon" title="Speak Date">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+        </svg>
+      </div>
+    </div>
 
-      <div style="--i:1" class="letter"><b>1</b></div>
-      <div style="--i:2" class="letter"><b>2</b></div>
-      <div style="--i:3" class="letter"><b>3</b></div>
-      <div style="--i:4" class="letter"><b>4</b></div>
-      <div style="--i:5" class="letter"><b>5</b></div>
-      <div style="--i:6" class="letter"><b>6</b></div>
-      <div style="--i:7" class="letter"><b>7</b></div>
-      <div style="--i:8" class="letter"><b>8</b></div>
-      <div style="--i:9" class="letter"><b>9</b></div>
-      <div style="--i:10" class="letter"><b>10</b></div>
-      <div style="--i:11" class="letter"><b>11</b></div>
-      <div style="--i:12" class="letter"><b>12</b></div>
-    </div></div>
-  
-  <script src="script.js"></script>
+    <div class="digital-clock">
+      <div class="time-display">
+        <div id="hours" class="time-unit">00</div>
+        <div class="separator">:</div>
+        <div id="minutes" class="time-unit">00</div>
+        <div class="separator">:</div>
+        <div id="seconds" class="time-unit">00</div>
+        <div id="ampm" class="ampm">AM</div>
+      </div>
+      
+      <div class="date-display">
+        <div id="date" class="date">Date: 01 Jan 2023</div>
+        <div id="day" class="day">Day: Monday</div>
+      </div>
+    </div>
+
+    <div class="analog-clock">
+      <div class="clock-face">
+        <div class="number" style="transform: rotate(30deg)"><b style="transform: rotate(-30deg)">1</b></div>
+        <div class="number" style="transform: rotate(60deg)"><b style="transform: rotate(-60deg)">2</b></div>
+        <div class="number" style="transform: rotate(90deg)"><b style="transform: rotate(-90deg)">3</b></div>
+        <div class="number" style="transform: rotate(120deg)"><b style="transform: rotate(-120deg)">4</b></div>
+        <div class="number" style="transform: rotate(150deg)"><b style="transform: rotate(-150deg)">5</b></div>
+        <div class="number" style="transform: rotate(180deg)"><b style="transform: rotate(-180deg)">6</b></div>
+        <div class="number" style="transform: rotate(210deg)"><b style="transform: rotate(-210deg)">7</b></div>
+        <div class="number" style="transform: rotate(240deg)"><b style="transform: rotate(-240deg)">8</b></div>
+        <div class="number" style="transform: rotate(270deg)"><b style="transform: rotate(-270deg)">9</b></div>
+        <div class="number" style="transform: rotate(300deg)"><b style="transform: rotate(-300deg)">10</b></div>
+        <div class="number" style="transform: rotate(330deg)"><b style="transform: rotate(-330deg)">11</b></div>
+        <div class="number" style="transform: rotate(360deg)"><b style="transform: rotate(-360deg)">12</b></div>
+        
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-circle"></div>
+      </div>
+    </div>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
