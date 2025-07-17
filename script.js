@@ -44,7 +44,7 @@ const handHour = document.querySelector('.hour');
 const handMin = document.querySelector('.min');
 const handSec = document.querySelector('.sec');
 
-setInterval(loop);
+setInterval(loop, 1000);
 
 function loop() {
   const date = new Date();
